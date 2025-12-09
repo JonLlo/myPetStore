@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Program {
@@ -25,7 +26,7 @@ public class Program {
             }
         }
 
-        Dog bella = new Dog("Bella", 10, "Brown", "Mongrel");
+        Dog bella = new Dog("Bella", age, "Brown", "Mongrel");
         bella.setName("Fred");
         //bella.setAge(5); //can't change age as setAge is private. All good.
 
@@ -35,6 +36,26 @@ public class Program {
 
         bella.makeSound();
         bella.celebrateBirthday();
+
+        //UPCASTING - Pet = new Dog
+        Pet fido = new Dog("Fido", 4, "Black and white", "Border Collie");
+        fido.makeSound();
+        fido.celebrateBirthday();
+
+        //DOWNCASTING - Dog = new Pet
+        //Dog a = new Pet("A", "Dog", 6); Don't do it!
+        //arraylists:
+
+        ArrayList<Pet> petList = new ArrayList<>();
+        Cat felix = new Cat("Felix", 12, "Black and white", "Moggy");
+        petList.add(bella);
+        petList.add(fido);
+        petList.add(felix);
+
+        for (Pet p : petList) {
+            p.makeSound();
+        }
+
 
 
 

@@ -1,9 +1,11 @@
-public class Dog extends Pet{
+import java.util.ArrayList;
+
+public class Cat extends Pet{
     private String colour;
     private final String breed;
 
-    public Dog(String name, int age, String colour, String breed) {
-        super(name, "Dog", age);
+    public Cat(String name, int age, String colour, String breed) {
+        super(name, "Cat", age);
         this.breed = breed;
         this.colour = colour;
     }
@@ -24,8 +26,9 @@ public class Dog extends Pet{
     public void makeSound() {
         //will override method in pet
         super.makeSound(); //super - using the makesound from the original method
-        IO.println("and also goes Woof!");
+        IO.println("and also goes meow!");
     }
+
 }
 
 //overriding vs overloading
