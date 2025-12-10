@@ -38,9 +38,11 @@ public class Program {
         bella.celebrateBirthday();
 
         //UPCASTING - Pet = new Dog
-        Pet fido = new Dog("Fido", 4, "Black and white", "Border Collie");
-        fido.makeSound();
-        fido.celebrateBirthday();
+        Pet fidoPet = new Dog("Fido", 4, "Black and white", "Border Collie");
+        Dog fidoDog = new Dog("Fido", 4, "Black and white", "Border Collie");
+
+        //fido.makeSound();
+        fidoPet.celebrateBirthday();
 
         //DOWNCASTING - Dog = new Pet
         //Dog a = new Pet("A", "Dog", 6); Don't do it!
@@ -49,12 +51,19 @@ public class Program {
         ArrayList<Pet> petList = new ArrayList<>();
         Cat felix = new Cat("Felix", 12, "Black and white", "Moggy");
         petList.add(bella);
-        petList.add(fido);
+        petList.add(fidoPet);
         petList.add(felix);
 
         for (Pet p : petList) {
-            p.makeSound();
+           // p.makeSound();
+            //p.eat(); no 'eat' in pet
         }
+        felix.eat();
+        //fidoPet.eat(); doesn't work as fido is a pet and eat is a dog or cat method.
+        fidoDog.eat();
+        IAnimalActions.identify();
+        IAnimalActions.printAnimal(fidoDog);
+
 
 
 

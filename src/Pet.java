@@ -36,11 +36,11 @@ public class Pet {
         return specie;
     }
 
-
+/*
     public void makeSound() {
         IO.println("Humph!");
     }
-
+*/
     public void celebrateBirthday() {
         age++;
         IO.println("age is now " + age);

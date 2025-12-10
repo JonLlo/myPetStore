@@ -1,4 +1,4 @@
-public class Dog extends Pet{
+public class Dog extends Pet implements IFeedable, IAnimalActions {
     private String colour;
     private final String breed;
 
@@ -20,11 +20,23 @@ public class Dog extends Pet{
     public String getBreed() {
         return breed;
     }
+
+    @Override
+    public void sleep() {
+        IO.println("ZZZ!");
+
+    }
+/*
     @Override //“I am replacing a method from the parent." just lets you know.
     public void makeSound() {
         //will override method in pet
         super.makeSound(); //super - using the makesound from the original method
         IO.println("and also goes Woof!");
+    }
+*/
+
+    public void eat() {
+        IO.println("nom nom");
     }
 }
 

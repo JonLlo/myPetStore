@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Cat extends Pet{
+public class Cat extends Pet  implements IFeedable {
     private String colour;
     private final String breed;
 
@@ -22,11 +22,17 @@ public class Cat extends Pet{
     public String getBreed() {
         return breed;
     }
+    /*
     @Override //“I am replacing a method from the parent." just lets you know.
     public void makeSound() {
         //will override method in pet
         super.makeSound(); //super - using the makesound from the original method
         IO.println("and also goes meow!");
+    }
+*/
+
+    public void eat() {
+        IO.println("sloppy eating");
     }
 
 }
